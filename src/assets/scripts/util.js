@@ -284,9 +284,7 @@ export function exportHTML() {
 
     // 判断是否是包裹代码块的 code 元素
     function isCode(element) {
-      return (
-        element.tagName === `CODE`
-      )
+      return element.tagName === `CODE`
     }
 
     // 判断是否是包裹代码字符的 span 元素

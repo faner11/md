@@ -163,7 +163,7 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
-    <el-button plain size="medium" :type="btnType" @click="copy">
+    <el-button plain size="medium" :type="btnType" @click="copy" id="copyBut">
       复制
     </el-button>
     <el-button plain size="medium" :type="btnType" @click="prePost">

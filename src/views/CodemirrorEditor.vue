@@ -551,6 +551,24 @@ export default {
       input.click()
       menu.removeChild(input)
     },
+    windowMountFun() {
+      window.importMarkdown = (text) => {
+        const txt = formatDoc(text)
+        if (txt) {
+          localStorage.setItem(`__editor_content`, txt)
+          this.editor.setValue(txt)
+          this.$message.success(`文档导入成功`)
+        }
+      }
+      window.exportMarkdown = (text) => {
+        const txt = formatDoc(text)
+        if (txt) {
+          localStorage.setItem(`__editor_content`, txt)
+          this.editor.setValue(txt)
+          this.$message.success(`文档导入成功`)
+        }
+      }
+    },
     // 格式化文档
     formatContent() {
       const doc = formatDoc(this.editor.getValue(0))
@@ -607,6 +625,7 @@ export default {
     setTimeout(() => {
       this.leftAndRightScroll()
     }, 300)
+    this.windowMountFun()
   },
   setup() {
     const store = useStore()

@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  postgres:
+    image: wxmd
+    ports:
+      - "6254:8080"
